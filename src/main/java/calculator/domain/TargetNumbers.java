@@ -28,7 +28,7 @@ public class TargetNumbers {
         try {
              value = Integer.parseInt(token);
         } catch (NumberFormatException e) {
-            throw new IllegalArgumentException("등록되지 않은 구분자가 사용되었습니다.");
+            throw new IllegalArgumentException(String.format("숫자 형식이 올바르지 않습니다: %s", token));
         }
 
         if (value < 0) {
