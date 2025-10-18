@@ -28,7 +28,7 @@ public class CalculatorService {
         // 2. 구분자 등록
         Delimiters delimiters = delimiterService.registerDelimiters(parsed);
         // 3. 숫자 추출
-        TargetNumbers targetNumbers = TargetNumbers.from(parsed.numberPart(), delimiters);
+        TargetNumbers targetNumbers = TargetNumbers.of(parsed.numberPart(), delimiters);
 
         return targetNumbers.sum();
     }

@@ -11,7 +11,7 @@ public class TargetNumbers {
         this.values = values;
     }
 
-    public static TargetNumbers from(String input, Delimiters delimiters) {
+    public static TargetNumbers of(String input, Delimiters delimiters) {
         String[] tokens = input.split(delimiters.toRegex());
 
         List<Integer> values = Arrays.stream(tokens)
