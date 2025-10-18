@@ -23,7 +23,13 @@ public class TargetNumbers {
     }
 
     private static int extractValue(String token) {
-        int value = Integer.parseInt(token);
+        int value;
+
+        try {
+             value = Integer.parseInt(token);
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("등록되지 않은 구분자가 사용되었습니다.");
+        }
 
         if (value < 0) {
             throw new IllegalArgumentException("음수는 허용되지 않습니다.");
