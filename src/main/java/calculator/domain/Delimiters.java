@@ -8,11 +8,11 @@ import java.util.regex.Pattern;
 
 public class Delimiters {
 
-    private final List<Delimiter> delimiters = new ArrayList<>();
-
     private static final String DEFAULT_COMMA = ",";
     private static final String DEFAULT_COLON = ":";
     private static final Pattern SPECIAL_CHARS_ONLY = Pattern.compile("^\\p{Punct}+$");
+
+    private final List<Delimiter> delimiters = new ArrayList<>();
 
     public Delimiters() {
         // 기본 구분자 등록
