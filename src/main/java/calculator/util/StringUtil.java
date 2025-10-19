@@ -1,6 +1,6 @@
 package calculator.util;
 
-public class StringUtil {
+public final class StringUtil {
 
     private StringUtil() { }
 
